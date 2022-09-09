@@ -1,0 +1,9 @@
+.form {
+    display: flex;
+    gap: 8px;
+}
+@media only screen and (max-width: 1080px) {
+    .form {
+      flex-direction: column;
+    }
+}

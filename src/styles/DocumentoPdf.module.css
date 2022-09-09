@@ -1,0 +1,19 @@
+@media print {
+  .header {
+    display: flex;
+    font-size: smaller;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header p {
+    margin: 0;
+    padding: 0;
+  }
+  .header, .headerSpace {
+    height: 50px;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+  }
+}

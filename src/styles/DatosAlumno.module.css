@@ -1,0 +1,21 @@
+.h5 {
+    font-size: large;
+    font-weight: bold;
+    margin: 0;
+}
+
+.p {
+    margin: 0;
+}
+@media only screen and (max-width: 1080px) {
+    .article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h5 {
+        font-size: large;
+        font-weight: bold;
+        margin: 0;
+    }
+}

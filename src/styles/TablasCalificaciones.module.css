@@ -1,0 +1,88 @@
+.container {
+    width: 100%;
+  }
+
+.trow {
+  display: grid;
+}
+.trow {
+  border-bottom: 1px solid gray;
+} 
+.tbody {
+  text-align: center;
+}
+.th, .thead {
+  border-bottom: 2px solid black;
+}
+.th {
+  text-align: center;
+}
+.thead > span,
+.trow > span,
+.tbody > span,
+.th {
+  padding: 8px 6px;
+}
+
+.tcomment {
+  text-align: left !important;
+}
+
+@media print {
+  .container {
+    page-break-after: always;
+  }
+  .tbody {
+    page-break-inside: avoid;
+    page-break-before: auto;
+  }
+}
+
+@media only screen and (min-width: 1080px), print {
+
+  .thead {
+    display: grid;
+  }
+
+  .trow, .thead {
+    grid-template-columns: 1fr 2fr 3fr 3fr;
+  }
+
+  .thead > span,
+  .trow > span,
+  .tbody > span {
+    text-align: center;
+  }
+
+  .th,
+  .tcomment {
+    grid-column: 1 / span 4;
+  }
+
+  .tcomment {
+    border-top: 1px solid lightgray;
+  }
+}
+
+@media not print {
+  @media only screen and (max-width: 1080px) {
+    .trow {
+      grid-template-columns: 1fr 3fr;
+    }
+
+    .trow > span:not(:last-child){
+      border-bottom: 1px solid lightgray;
+    }
+
+    .thead > span,
+    .trow > span,
+    .tbody > span {
+      text-align: left;
+    }
+    
+    .th,
+    .tcomment {
+      grid-column: 1 / span 2;
+    }
+  }
+}
